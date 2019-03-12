@@ -1,0 +1,27 @@
+{
+  "name": "next-auth-examples",
+  "version": "1.12.1",
+  "description": "An example project for next-auth",
+  "repository": "https://github.com/iaincollins/next-auth.git",
+  "main": "",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node index.js",
+    "build": "next build",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express-session": "^1.15.6",
+    "nedb": "^1.8.0",
+    "next": "^7.0.2",
+    "next-auth": "^1.12.1",
+    "passport-google-oauth": "^1.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}
