@@ -36,6 +36,7 @@ const NeDB = require('nedb')
 
 module.exports = () => {
   return new Promise((resolve, reject) => {
+    console.log('next-auth.functions: return new Promise((resolve, reject) => {');
     // NeDB is not persistant and is intended for testing only.
     let collection = new NeDB({ autoload: true })
     collection.loadDatabase(err => {
@@ -44,9 +45,11 @@ module.exports = () => {
     })
   })
   .then(usersCollection => {
+    console.log('next-auth.functions: usersCollection =>');
     return Promise.resolve({
       // If a user is not found find() should return null (with no error).
       find: ({provider} = {}) => {
+        console.log('next-auth.functions: find');
         let query = {}
 
         if(provider) {
@@ -69,6 +72,7 @@ module.exports = () => {
       //
       // You can use this to capture profile.avatar, profile.location, etc.
       insert: (user, oAuthProfile) => {
+        console.log('next-auth.functions: insert');
         return new Promise((resolve, reject) => {
           usersCollection.insert(user, (err, response) => {
             if (err) return reject(err)
@@ -90,6 +94,7 @@ module.exports = () => {
       //
       // You can use this to capture profile.avatar, profile.location, etc.
       update: (user, profile) => {
+        console.log('next-auth.functions: update');
         return new Promise((resolve, reject) => {
           usersCollection.update({_id: objectId(user._id)}, user, {}, (err) => {
             if (err) return reject(err)
@@ -103,6 +108,7 @@ module.exports = () => {
       // This method is not used in the current version of next-auth but will
       // be in a future release, to provide an endpoint for account deletion.
       remove: (id) => {
+        console.log('next-auth.functions: remove');
         return new Promise((resolve, reject) => {
           usersCollection.remove({_id: objectId(id)}, (err) => {
             if (err) return reject(err)
@@ -113,6 +119,7 @@ module.exports = () => {
 
       // Seralize turns the value of the ID key from a User object
       serialize: (user) => {
+        console.log('next-auth.functions: serialize');
         // Supports serialization from Mongo Object *and* deserialize() object
         if (user.id) {
           // Handle responses from deserialize()
@@ -129,6 +136,7 @@ module.exports = () => {
       // exported to clients. It should not return private/sensitive fields,
       // only fields you want to expose via the user interface.
       deserialize: (id) => {
+        console.log('next-auth.functions: deserialize');
         return new Promise((resolve, reject) => {
           usersCollection.findOne({ _id: objectId(id) }, (err, user) => {
             if (err) return reject(err)

@@ -1,8 +1,8 @@
 {
-  "name": "next-auth-examples",
+  "name": "next-passport-oauth-google-email-nedb",
   "version": "1.12.1",
-  "description": "An example project for next-auth",
-  "repository": "https://github.com/iaincollins/next-auth.git",
+  "description": "An example project for OAuth2-authentication in Next.js",
+  "repository": "https://github.com/softspider/next-passport-oauth-google-email-nedb",
   "main": "",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node index.js",
