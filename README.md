@@ -31,8 +31,8 @@ yarn dev
 
 ## Authors
 
-- [Iain Collins](https://github.com/iaincollins) - original code
-- [Alexander Lapygin](https://github.com/AlexanderLapygin) - cutting to google and embedding in [Soft Spiders](https://github.com/softspider)
+* [Iain Collins](https://github.com/iaincollins) - original code
+* [Alexander Lapygin](https://github.com/AlexanderLapygin) - cutting to google and catching in [Soft Spiders Net](https://github.com/softspider)
 
 ## Inspired by
 
