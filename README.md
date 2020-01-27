@@ -13,7 +13,7 @@ This example combines:
 
 ## Direct ancestors
 
-- [Minimalistic Next.js example](https://github.com/softspider/next.js)
+- [Minimalistic Next.js example](https://github.com/softspiders/nextjs)
 
 ---
 
