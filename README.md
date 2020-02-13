@@ -1,4 +1,4 @@
-SOFTSPIDERS
+[SOFTSPIDERS](https://github.com/softspiders/softspiders)
 
 # next-passport-oauth-google-email-nedb
 
@@ -8,6 +8,21 @@ This example combines:
 - [NeDB](https://github.com/louischatriot/nedb)
 - [OAuth 2.0](https://oauth.net/2/)
 - [Passport](http://www.passportjs.org/)
+
+---
+
+## Feature tags
+
+- email
+- google
+- nedb
+- next
+- next-auth
+- oauth
+- passport
+- start
+- template
+- zeit
 
 ---
 
